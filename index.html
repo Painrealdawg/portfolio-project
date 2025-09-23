@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>KAYODE'S|Project</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent: #6a63ff;   
+      --muted: #eef0f4;    
+      --card-bg: #ffffff;
+      --text: #101227;
+      --subtle: #6b7280;
+    }
+
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--muted);
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    
+    .navbar-brand { color: var(--accent); font-weight:700; letter-spacing:.2px; }
+    .nav-link { color: #333 !important; font-weight:500; }
+    .navbar { background: transparent; }
+
+    
+    .hero {
+      background: var(--card-bg);
+      padding: 90px 20px 80px;
+      border-bottom-left-radius:36px;
+      border-bottom-right-radius:36px;
+      position: relative;
+      overflow: visible;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+    }
+    .hero .container { position: relative; z-index: 3; }
+    .hero h1{
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      margin-bottom: .6rem;
+      line-height:1.01;
+    }
+    .hero p.lead {
+      color: var(--subtle);
+      max-width: 720px;
+      margin: 0 auto 1.2rem;
+      font-size: 1rem;
+    }
+    .lets-connect { color: var(--accent); font-weight:600; letter-spacing:.6px; font-size:.9rem; }
+
+    .social-icons a { color: #333; margin-right: 12px; font-size: 1.05rem; }
+    .social-icons a:hover { color: var(--accent); }
+
+    
+    .shape {
+      position:absolute;
+      opacity: .9;
+      z-index:1;
+      pointer-events: none;
+    }
+    .shape.small { width:48px; height:48px; opacity:.65; }
+    .shape.big { width:140px; height:140px; opacity: .95; }
+    .shape.pale { opacity:.25; }
+
+    
+    .projects { padding: 48px 0 60px; }
+    .project-card {
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(16,18,39,0.05);
+      border: 1px solid rgba(14,16,30,0.04);
+      overflow: hidden;
+    }
+    .project-card .media {
+      background: linear-gradient(180deg,#fff,#fbfbff);
+      padding: 18px;
+    }
+    .project-card .card-body { padding: 18px 22px; }
+    .project-meta { color: var(--subtle); font-size:.87rem; margin-bottom:.6rem; }
+
+    
+    .project-hero { border: 2px solid rgba(106,99,255,0.12); box-shadow: 0 14px 30px rgba(106,99,255,0.06); }
+
+    
+    .about {
+      background: #fff;
+      padding: 36px;
+      border-radius: 18px;
+      margin: 36px 0;
+      box-shadow: 0 6px 20px rgba(16,18,39,0.03);
+    }
+    .skill-pill {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:#f3f4ff;
+      color:var(--text);
+      margin-right:8px;
+      margin-bottom:8px;
+      font-weight:600;
+      font-size:.9rem;
+      
+    }
+    
+
+    
+    .contact {
+      background: linear-gradient(180deg,var(--accent), #5d56f0);
+      color: #fff;
+      padding: 70px 20px;
+      border-top-left-radius: 48px;
+      border-top-right-radius: 48px;
+      position: relative;
+      justify-content: flex-end;
+      
+    }
+    .contact .card {
+      background: rgba(255,255,255,0.07);
+      border-radius: 12px;
+      border: none;
+    }
+    .contact label { color: rgba(255,255,255,0.85); font-weight:600; }
+    .form-control.contact {
+      background: rgba(202, 222, 223, 0.12);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 14px;
+  
+    }
+    .btn-light-custom {
+      background: #fff;
+      color: var(--accent);
+      border-radius: 8px;
+      font-weight:700;
+      padding: 10px 18px;
+    }
+
+    
+    @media (max-width:768px){
+      .hero { padding: 72px 16px 60px; border-radius: 0 0 28px 28px; }
+      .shape.big { display:none; }
+    }
+
+    
+    .section-wrap { max-width:980px; margin:auto; }
+
+  </style>
+</head>
+<body>
+
+  
+  <nav class="navbar navbar-expand-lg">
+    <div class="container section-wrap">
+      <a class="navbar-brand" href="#">My Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  
+  <header class="hero">
+    <svg class="shape big" style="right:34px; top:10px; transform: rotate(25deg);" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="rgba(106,99,255,0.55)" stroke-width="16" stroke-linecap="round">
+        <path d="M20 60 A40 40 0 0 1 80 20" />
+      </g>
+    </svg>
+
+    <svg class="shape small" style="left:30px; top:18px; transform: rotate(-25deg);" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect x="10" y="12" width="60" height="12" rx="3" fill="rgba(106,99,255,0.16)"/>
+      <path d="M10 60 a18 18 0 0 0 36 0" fill="rgba(106,99,255,0.9)"/>
+    </svg>
+
+    <svg class="shape small pale" style="right:160px; top:110px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="48" cy="48" r="24" fill="none" stroke="rgba(16,18,39,0.06)" stroke-width="2"/>
+    </svg>
+
+    <div class="container section-wrap text-start text-md-start">
+      <div class="row">
+        <div class="col-12 col-md-8">
+          <h1>I'm KAYODE.<br>Glad to see you!</h1>
+          <p class="lead">I’m a software developer! I can help you build a product, feature, or website. Look through some of my work
+            and experience. If you like what you see and have a project you need coded, don’t hesitate to contact me.</p>
+
+          <div class="d-flex align-items-center gap-3 mt-3">
+            <div class="lets-connect">LET'S CONNECT</div>
+            <div class="social-icons">
+              <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="#" title="Medium"><i class="fab fa-medium"></i></a>
+              <a href="#" title="Github"><i class="fab fa-github"></i></a>
+              <a href="#" title="Peace"><i class="fas fa-hand-peace"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div style="position:absolute; left:0; right:0; bottom:-36px; height:120px; background:transparent; z-index:2;">
+      <div style="height:120px; width:100%; background:linear-gradient(180deg,transparent,transparent);">
+      </div>
+    </div>
+  </header>
+
+  
+  <main class="container projects section-wrap">
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="project-card p-3 d-flex gap-3 align-items-center">
+          <div class="media" style="flex:0 0 42%;">
+            <img src="./images/top-main.png" alt="collection preview" class="img-fluid rounded" />
+          </div>
+          <div class="card-body">
+            <div class="project-meta">COLLECTION • Front End Dev • 2025</div>
+            <h4 class="mb-2">E-commerce</h4>
+            <p class="mb-3 text-muted">You can explore and shop many diffrent collection from various brands  here.</p>
+            <a class="btn btn-outline-primary btn-sm" href="#">See project</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+ 
+  <section class="container section-wrap">
+    <div class="about">
+      <div class="row align-items-center">
+        <div class="col-md-7">
+          <h3>About Myself</h3>
+          <p class="text-muted">I’m a software developer focusing on building beautiful, accessible, and performant user interfaces and services. I enjoy working across the stack and love collaborating with product and design teams.</p>
+
+          <div class="mt-3">
+            <div class="skill-pill"><div class="skill-icon">JS</div> JavaScript</div>
+            <div class="skill-pill"><div class="skill-icon">R</div> React</div>
+            <div class="skill-pill"><div class="skill-icon">B</div> Bootstrap</div>
+            <div class="skill-pill"><div class="skill-icon">CSS</div> CSS</div>
+          </div>
+          <div class="mt-4 d-flex gap-3">
+            <a class="btn btn-outline-secondary btn-sm" href="#">Download resume</a>
+            <a class="btn btn-outline-primary btn-sm" href="#contact">Contact me</a>
+          </div>
+          <div class="d-flex gap-4">
+            <div class="Skill-card align-items-center justify-content-between">
+                      <h5 class="mb-5">Languages</h5>
+                        <div class="text-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="30" alt="">
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="30" alt="">
+                            <p>HTML</p>
+                        </div>
+                        <div class="text-center">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="30" alt="">
+                        <p>CSS</p>
+                        <h5 class="mb-b">Frameworks</h5>
+                        <h5 class="mb-b">Skill</h5>
+                        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="contact" class="contact mt-5">
+    <svg class="shape small" style="left:18px; top:30px; fill:rgba(255,255,255,0.08);" viewBox="0 0 100 100">
+      <rect x="6" y="10" width="70" height="12" rx="3"></rect>
+    </svg>
+    <svg class="shape small pale" style="right:120px; top:40px;" viewBox="0 0 100 100">
+      <circle cx="48" cy="48" r="18" fill="rgba(255,255,255,0.06)"></circle>
+    </svg>
+
+    <div class="container section-wrap">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="text-center mb-4">
+            <h2 class="fw-bold">Contact me</h2>
+            <p class="mb-0">If you have an application you are interested in
+               developing, a feature that you need built or a project
+                that needs coding. I’d love to help with it!</p>
+          </div>
+
+          <div class="card p-4 mx-auto" style="max-width:760px;">
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Full name</label>
+                  <input type="text" class="form-control contact" id="name" placeholder="bigdawg" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email</label>
+                  <input type="email" class="form-control contact" id="email" placeholder="bigdawg@gmail.com" required>
+                </div>
+
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control contact" id="message" rows="5" placeholder="Write your message here" required></textarea>
+                </div>
+
+                <div class="col-12 text-center">
+                  <button type="submit" class="btn btn-light-custom">Get in touch</button>
+                </div>
+              </div>
+            </form>
+            <div id="formAlert" class="mt-3" style="display:none;"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="py-4 text-center" style="color: #94a3b8;">
+    <div class="container section-wrap">
+      <small>© <span id="year"></span> Kayode • Built with Bootstrap</small>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+</body>
+</html>
