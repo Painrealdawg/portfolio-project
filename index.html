@@ -115,7 +115,7 @@
 
     
     .contact {
-      background: linear-gradient(180deg,var(--accent), #5d56f0);
+      background: linear-gradient(180deg,var(--accent), #110f3d);
       color: #fff;
       padding: 70px 20px;
       border-top-left-radius: 48px;
@@ -163,29 +163,20 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container section-wrap">
       <a class="navbar-brand" href="#">My Logo</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
     </div>
   </nav>
 
   
   <header class="hero">
-    <svg class="shape big" style="right:34px; top:10px; transform: rotate(25deg);" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <g fill="none" stroke="rgba(106,99,255,0.55)" stroke-width="16" stroke-linecap="round">
-        <path d="M20 60 A40 40 0 0 1 80 20" />
-      </g>
-    </svg>
-
-    <svg class="shape small" style="left:30px; top:18px; transform: rotate(-25deg);" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <rect x="10" y="12" width="60" height="12" rx="3" fill="rgba(106,99,255,0.16)"/>
-      <path d="M10 60 a18 18 0 0 0 36 0" fill="rgba(106,99,255,0.9)"/>
-    </svg>
-
-    <svg class="shape small pale" style="right:160px; top:110px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="48" cy="48" r="24" fill="none" stroke="rgba(16,18,39,0.06)" stroke-width="2"/>
-    </svg>
-
     <div class="container section-wrap text-start text-md-start">
       <div class="row">
         <div class="col-12 col-md-8">
@@ -219,7 +210,7 @@
     <div class="row g-4">
       <div class="col-12">
         <div class="project-card p-3 d-flex gap-3 align-items-center">
-          <div class="media" style="flex:0 0 42%;">
+          <div class="media" style="flex:15% 25% 80%;">
             <img src="./images/top-main.png" alt="collection preview" class="img-fluid rounded" />
           </div>
           <div class="card-body">
@@ -239,22 +230,21 @@
   <section class="container section-wrap">
     <div class="about">
       <div class="row align-items-center">
-        <div class="col-md-7">
+        <div class="col-md-8 col-lg-6e">
           <h3>About Myself</h3>
-          <p class="text-muted">I’m a software developer focusing on building beautiful, accessible, and performant user interfaces and services. I enjoy working across the stack and love collaborating with product and design teams.</p>
+          <p class="text-muted">I’m a software developer passionate about creating clean, efficient, and user-friendly applications. I specialize in building responsive interfaces and reliable services that deliver great experiences. I enjoy working on both front-end and back-end tasks, and I thrive when collaborating with design and product teams to bring ideas to life.</p>
 
           <div class="mt-3">
-            <div class="skill-pill"><div class="skill-icon">JS</div> JavaScript</div>
-            <div class="skill-pill"><div class="skill-icon">R</div> React</div>
-            <div class="skill-pill"><div class="skill-icon">B</div> Bootstrap</div>
-            <div class="skill-pill"><div class="skill-icon">CSS</div> CSS</div>
+            <div class="skill-pill"><div class="skill-icon"></div>JavaScript</div>
+            <div class="skill-pill"><div class="skill-icon"></div>React</div>
+            <div class="skill-pill"><div class="skill-icon"></div>Bootstrap</div>
+            <div class="skill-pill"><div class="skill-icon"></div>CSS</div>
           </div>
           <div class="mt-4 d-flex gap-3">
-            <a class="btn btn-outline-secondary btn-sm" href="#">Download resume</a>
             <a class="btn btn-outline-primary btn-sm" href="#contact">Contact me</a>
           </div>
-          <div class="d-flex gap-4">
-            <div class="Skill-card align-items-center justify-content-between">
+          <div class="text-end">
+            <div class="Skill-card align-items-center justify-content-xxl-start">
                       <h5 class="mb-5">Languages</h5>
                         <div class="text-center">
                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="30" alt="">
@@ -299,11 +289,11 @@
               <div class="row g-3">
                 <div class="col-md-6">
                   <label class="form-label">Full name</label>
-                  <input type="text" class="form-control contact" id="name" placeholder="bigdawg" required>
+                  <input type="text" class="form-control contact" id="name" placeholder="" required>
                 </div>
                 <div class="col-md-6">
                   <label class="form-label">Email</label>
-                  <input type="email" class="form-control contact" id="email" placeholder="bigdawg@gmail.com" required>
+                  <input type="email" class="form-control contact" id="email" placeholder="" required>
                 </div>
 
                 <div class="col-12">
@@ -325,7 +315,7 @@
   </section>
   <footer class="py-4 text-center" style="color: #94a3b8;">
     <div class="container section-wrap">
-      <small>© <span id="year"></span> Kayode • Built with Bootstrap</small>
+      <small>© 2025 <span id="year"></span> Kayode • Built with Bootstrap</small>
     </div>
   </footer>
 
